@@ -28,3 +28,19 @@ export const saveConversation = (conversation: Conversation) => {
 export const saveConversations = (conversations: Conversation[]) => {
   localStorage.setItem('conversationHistory', JSON.stringify(conversations));
 };
+
+/**
+ * @param Array<string> 字符串
+ * @param String type 想要获取的类型
+ * 生成对应的数据项以及获取对应的数据
+ * @returns string 对应的数据
+ */
+export const stringToStram=(str:string)=>{
+  const textStream = new ReadableStream({
+    start(controller) {
+      controller.enqueue(str);
+      controller.close();
+    }
+  });
+  return textStream;
+}

@@ -218,7 +218,7 @@ export const Chatbar = () => {
         handleClearPluginKey,
         handleApiKeyChange,
       }}
-    >
+    >  
       <Sidebar<Conversation>
         side={'left'}
         isOpen={showChatbar}
