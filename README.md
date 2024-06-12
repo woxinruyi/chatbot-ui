@@ -1,4 +1,4 @@
-# personal robot
+# db robot
 
 personal robot is an open source chat UI for AI models.
 
